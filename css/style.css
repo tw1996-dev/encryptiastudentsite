@@ -6,7 +6,7 @@ body {
 }
 
 /* ===============================================
-    NAVIGATION
+    NAVIGATION   ----->>!!!!!!! MAX 500 px like that , need to fix it under that value 
     =============================================== */
 nav {
     display: flex;
@@ -20,11 +20,9 @@ nav ul {
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color: #1B3A4B;
     margin-top: 0;
     padding: 9px 0;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    z-index: 1000; 
 }
 
 .navigation-link {
@@ -38,65 +36,26 @@ nav ul {
     color: #1B3A4B;
     background-color: #B1D4E0;
     border-radius: 6px;
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
 }
 
-/* Media query for navigation link font size on larger screens */
-@media screen and (min-width: 346px) {
-    .navigation-link {
-        font-size: 1rem;
-    }
-}
 
-/* Media query for smaller navigation link font size on smaller screens */
-@media screen and (max-width: 345px) {
-    .navigation-link {
-        font-size: 0.7rem;
-    }
-}
 
-/* Media query for under-header font size on smaller screens */
-@media screen and (max-width: 432px) {
-    .under-header {
-        font-size: 0.9rem;
-    }
-}
+
+
+
 
 /* ===============================================
     HEADER
     =============================================== */
 header {
     background: linear-gradient(to bottom, #1B3A4B, #0C2D48);
-    background-size: 200% 200%;
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 300%;
-    padding-bottom: 2rem; 
-    overflow-x: clip;
-}
+    padding-bottom: 1rem;
 
-/* Text sliding animation */
-@keyframes slideText {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(200%); }
-}
-
-.under-header {
-    font-family: "Freckle Face", system-ui;
-    font-weight: 200;
-    font-style: normal;
-    font-size: 2rem;
-    animation: slideText 10s infinite linear;
-    overflow-x: clip; 
-}
-
-/* Gradient animation for H1 */
-@keyframes moveGradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
 }
 
 h1 {
@@ -105,22 +64,131 @@ h1 {
     font-style: oblique;
     margin: 0;
     padding-top: 4rem;
-    background: linear-gradient(45deg, #E3F6FC, #B1D4E0, #7DA2A9);
+    background: #b0dee6;
     background-size: 300% 300%;
-    -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     text-transform: uppercase;
-    animation: moveGradient 6s infinite linear;
+
 }
 
-/* Media query for smaller header font size on smaller screens */
-@media screen and (max-width: 850px) {
+@media (min-width: 300px) {
     header {
-        font-size: 200%;
-        padding-bottom: 0.1rem;
+    font-size: 180%;
+
+}
+}
+
+@media (min-width: 470px) {
+    header {
+    font-size: 270%;
+
+}
+}
+
+@media (min-width: 600px) {
+    header {
+    font-size: 350%;
+
+}
+}
+
+@media (min-width: 700px) {
+    header {
+    font-size: 400%;
+
+}
+}
+
+@media (min-width: 999px) {
+    header {
+    font-size: 500%;
+
+}
+}
+
+
+
+
+/* UNDER HEADER with media queries */
+@media (min-width: 280px) {
+    @keyframes slideText {
+        0% {
+            transform: translateX(-120vw);
+        }
+
+        100% {
+            transform: translateX(100vw);
+        }
+    }
+
+    .under-header {
+        font-size: 1.2rem;
     }
 }
+
+@media (min-width: 480px) {
+    @keyframes slideText {
+        0% {
+            transform: translateX(-120vw);
+        }
+
+        100% {
+            transform: translateX(100vw);
+        }
+    }
+
+    .under-header {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 670px) {
+    @keyframes slideText {
+        0% {
+            transform: translateX(-120vw);
+        }
+        100% {
+            transform: translateX(100vw);
+        }
+    }
+
+    .under-header {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    @keyframes slideText {
+        0% {
+            transform: translateX(-150vw);
+        }
+
+        100% {
+            transform: translateX(100vw);
+        }
+    }
+
+    .under-header {
+        font-size: 3.3rem;
+    }
+}
+
+
+
+.under-header {
+    font-family: "Freckle Face", system-ui;
+    overflow-x: clip;
+    margin: 5px;
+    animation: slideText 12s infinite linear;
+}
+
+
+
+
+
+
+
 
 /* ===============================================
     MAIN SECTIONS
@@ -137,15 +205,16 @@ section {
     font-size: larger;
     margin-left: 2em;
     width: 800px;
-    max-width: 90%; 
+    max-width: 90%;
 }
 
-section h2 {
+ h2 {
     text-align: center;
     font-size: 2em;
     margin-top: 2rem;
     font-family: "Playwrite US Modern", cursive;
     font-optical-sizing: auto;
+    text-wrap: balance;
 }
 
 section h2::after {
@@ -159,14 +228,20 @@ section h2::after {
 
 section p {
     margin: 8px 0;
-    line-height: 1.5; 
+    line-height: 1.5;
 }
 
 /* Resetting styles for em and strong elements */
-em, strong {
+em,
+strong {
     font-style: normal;
+}
+
+.strong {
     font-weight: normal;
 }
+
+
 
 /* ===============================================
     BENEFITS SECTION
@@ -179,31 +254,31 @@ em, strong {
 }
 
 #benefits dd {
-    margin-bottom: 10px; 
-    line-height: 1.4; 
+    margin-bottom: 10px;
+    line-height: 1.4;
 }
 
 /* ===============================================
     PARTNERS SECTION
     =============================================== */
 /* Media query for grid layout in the partners section on larger screens */
-@media screen and (min-width: 851px){
+@media screen and (min-width: 851px) {
     .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 6fr;
-    row-gap: 30px;
-    column-gap: 15px; 
-}
+        display: grid;
+        grid-template-columns: 1fr 6fr;
+        row-gap: 30px;
+        column-gap: 15px;
+    }
 }
 
 /* Media query for adapting styles on screens up to 850px width */
 @media screen and (max-width: 850px) {
-    /* Makes content sections take 90% of screen width and removes left margin */
+
     section {
         width: 90%;
         margin-left: 0;
     }
-    /* Changes the Partners section grid from two columns to one column layout */
+
     .grid-container {
         grid-template-columns: 1fr;
     }
@@ -211,24 +286,15 @@ em, strong {
     #partners dt {
         text-align: center;
     }
+
     #partners dd {
         padding: 10px;
     }
-    footer {
-    padding-bottom: 0;
-    margin-bottom: 0;
-    }
+
+
 }
 
-/* Media query for further adjustments on screens up to 500px width */
-@media screen and (max-width: 500px) {
-    header h1 {
-        font-size: 4rem;
-    }
-    .under-header {
-    margin: 0.25rem;
-    }
-}
+
 
 #partners dt {
     font-size: larger;
@@ -240,7 +306,7 @@ em, strong {
     color: black;
     padding: 1.5px;
     border-radius: 6px;
-    transition: all 0.2s ease-in-out; 
+    transition: all 0.2s ease-in-out;
 }
 
 #partners a:hover {
@@ -250,40 +316,19 @@ em, strong {
     color: white;
 }
 
-/* ===============================================
-    SOCIAL MEDIA
-    =============================================== */
-.social-media {
-    text-decoration: none;
-    display: flex; 
-    justify-content: center;
-    margin: 20px 0; 
-}
 
-.socials {
-    width: 30px;
-    padding: 3px;
-    margin: 0 3px;
-    transition: transform 0.3s ease-in-out; 
-}
 
-.socials:hover {
-    transform: scale(1.2);
-}
+/* FOOTER */
 
-/* ===============================================
-    FOOTER
-    =============================================== */
 footer {
     background-color: #0C2D48;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
     color: #E3F6FC;
-    font-size: 10px;
     box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.3);
-    padding: 10px 0; 
+    padding: 10px 0;
 }
+
 
 footer p {
     margin: 0;
@@ -312,11 +357,48 @@ footer a {
     text-decoration: none;
     color: #B1D4E0;
     padding: 2px;
-    border-radius: 6px; 
-    transition: all 0.2s ease; 
+    border-radius: 6px;
+    transition: all 0.2s ease;
 }
 
 footer a:hover {
     color: #0C2D48;
     background-color: #B1D4E0;
 }
+
+@media (min-width: 0px) and (max-width: 700px) {
+  footer {
+/* NEED TO FIX IT LATER */
+
+  }
+
+}
+
+
+
+/* SOCIALS  */
+.social-media {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+@media  (max-width: 800px) {
+  .social-media {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, auto);  
+  }
+}
+
+.socials {
+    width: 30px;
+    padding: 3px;
+    margin: 0 3px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.socials:hover {
+    transform: scale(1.2);
+}
+
