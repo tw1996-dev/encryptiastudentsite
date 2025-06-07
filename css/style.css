@@ -1,0 +1,322 @@
+/* ===============================================
+    RESET AND BASIC STYLES
+    =============================================== */
+body {
+    margin: 0;
+}
+
+/* ===============================================
+    NAVIGATION
+    =============================================== */
+nav {
+    display: flex;
+    margin: 0;
+    font-size: 150%;
+}
+
+nav ul {
+    position: fixed;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #1B3A4B;
+    margin-top: 0;
+    padding: 9px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000; 
+}
+
+.navigation-link {
+    text-decoration: none;
+    color: #E3F6FC;
+    font-weight: bold;
+    padding: 0.6rem;
+}
+
+.navigation-link:hover {
+    color: #1B3A4B;
+    background-color: #B1D4E0;
+    border-radius: 6px;
+    transition: all 0.3s ease; 
+}
+
+/* Media query for navigation link font size on larger screens */
+@media screen and (min-width: 346px) {
+    .navigation-link {
+        font-size: 1rem;
+    }
+}
+
+/* Media query for smaller navigation link font size on smaller screens */
+@media screen and (max-width: 345px) {
+    .navigation-link {
+        font-size: 0.7rem;
+    }
+}
+
+/* Media query for under-header font size on smaller screens */
+@media screen and (max-width: 432px) {
+    .under-header {
+        font-size: 0.9rem;
+    }
+}
+
+/* ===============================================
+    HEADER
+    =============================================== */
+header {
+    background: linear-gradient(to bottom, #1B3A4B, #0C2D48);
+    background-size: 200% 200%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 300%;
+    padding-bottom: 2rem; 
+    overflow-x: clip;
+}
+
+/* Text sliding animation */
+@keyframes slideText {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(200%); }
+}
+
+.under-header {
+    font-family: "Freckle Face", system-ui;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 2rem;
+    animation: slideText 10s infinite linear;
+    overflow-x: clip; 
+}
+
+/* Gradient animation for H1 */
+@keyframes moveGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1 {
+    font-family: "Freckle Face", system-ui;
+    font-weight: 500;
+    font-style: oblique;
+    margin: 0;
+    padding-top: 4rem;
+    background: linear-gradient(45deg, #E3F6FC, #B1D4E0, #7DA2A9);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+    animation: moveGradient 6s infinite linear;
+}
+
+/* Media query for smaller header font size on smaller screens */
+@media screen and (max-width: 850px) {
+    header {
+        font-size: 200%;
+        padding-bottom: 0.1rem;
+    }
+}
+
+/* ===============================================
+    MAIN SECTIONS
+    =============================================== */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+section {
+    padding: 10px;
+    font-size: larger;
+    margin-left: 2em;
+    width: 800px;
+    max-width: 90%; 
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 2rem;
+    font-family: "Playwrite US Modern", cursive;
+    font-optical-sizing: auto;
+}
+
+section h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    margin-top: 10px;
+}
+
+section p {
+    margin: 8px 0;
+    line-height: 1.5; 
+}
+
+/* Resetting styles for em and strong elements */
+em, strong {
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* ===============================================
+    BENEFITS SECTION
+    =============================================== */
+#benefits dt {
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+    margin: 30px 0;
+}
+
+#benefits dd {
+    margin-bottom: 10px; 
+    line-height: 1.4; 
+}
+
+/* ===============================================
+    PARTNERS SECTION
+    =============================================== */
+/* Media query for grid layout in the partners section on larger screens */
+@media screen and (min-width: 851px){
+    .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    row-gap: 30px;
+    column-gap: 15px; 
+}
+}
+
+/* Media query for adapting styles on screens up to 850px width */
+@media screen and (max-width: 850px) {
+    /* Makes content sections take 90% of screen width and removes left margin */
+    section {
+        width: 90%;
+        margin-left: 0;
+    }
+    /* Changes the Partners section grid from two columns to one column layout */
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    #partners dt {
+        text-align: center;
+    }
+    #partners dd {
+        padding: 10px;
+    }
+    footer {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    }
+}
+
+/* Media query for further adjustments on screens up to 500px width */
+@media screen and (max-width: 500px) {
+    header h1 {
+        font-size: 4rem;
+    }
+    .under-header {
+    margin: 0.25rem;
+    }
+}
+
+#partners dt {
+    font-size: larger;
+    font-weight: bold;
+}
+
+#partners a {
+    text-decoration: none;
+    color: black;
+    padding: 1.5px;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out; 
+}
+
+#partners a:hover {
+    text-decoration: dotted;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: black;
+    color: white;
+}
+
+/* ===============================================
+    SOCIAL MEDIA
+    =============================================== */
+.social-media {
+    text-decoration: none;
+    display: flex; 
+    justify-content: center;
+    margin: 20px 0; 
+}
+
+.socials {
+    width: 30px;
+    padding: 3px;
+    margin: 0 3px;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.socials:hover {
+    transform: scale(1.2);
+}
+
+/* ===============================================
+    FOOTER
+    =============================================== */
+footer {
+    background-color: #0C2D48;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #E3F6FC;
+    font-size: 10px;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.3);
+    padding: 10px 0; 
+}
+
+footer p {
+    margin: 0;
+}
+
+footer h4 {
+    margin: 2px;
+}
+
+.footer-left {
+    padding: 15px;
+}
+
+.footer-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-item {
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #B1D4E0;
+    padding: 2px;
+    border-radius: 6px; 
+    transition: all 0.2s ease; 
+}
+
+footer a:hover {
+    color: #0C2D48;
+    background-color: #B1D4E0;
+}
