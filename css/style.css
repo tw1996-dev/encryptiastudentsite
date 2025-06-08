@@ -5,13 +5,16 @@ body {
     margin: 0;
 }
 
+* {font-family: 'Outfit', sans-serif;}
+
+
 /* ===============================================
-    NAVIGATION   ----->>!!!!!!! MAX 500 px like that , need to fix it under that value 
+    NAVIGATION   ----->>!!!!!!! MAX 518 px like that , need to fix it under that value 
     =============================================== */
 nav {
     display: flex;
     margin: 0;
-    font-size: 150%;
+    font-size: 150%; 
 }
 
 nav ul {
@@ -23,6 +26,8 @@ nav ul {
     margin-top: 0;
     padding: 9px 0;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: #0C2D48;
+    z-index: 500;
 }
 
 .navigation-link {
@@ -39,9 +44,9 @@ nav ul {
     transition: all 0.3s ease;
 }
 
+@media (max-width: 515px) {
 
-
-
+}
 
 
 
@@ -55,13 +60,12 @@ header {
     flex-direction: column;
     align-items: center;
     padding-bottom: 1rem;
+    overflow-x: clip;
 
 }
 
 h1 {
-    font-family: "Freckle Face", system-ui;
-    font-weight: 500;
-    font-style: oblique;
+    font-weight: 800; 
     margin: 0;
     padding-top: 4rem;
     background: #b0dee6;
@@ -71,36 +75,56 @@ h1 {
     text-transform: uppercase;
 
 }
-
-@media (min-width: 300px) {
+@media (min-width: 290px) {
     header {
-    font-size: 180%;
+    font-size: 140%;
+
+}
+}
+
+@media (min-width: 366px) {
+    header {
+    font-size: 160%;
 
 }
 }
 
 @media (min-width: 470px) {
     header {
-    font-size: 270%;
+    font-size: 210%;
 
 }
 }
 
 @media (min-width: 600px) {
     header {
-    font-size: 350%;
+    font-size: 270%;
 
 }
 }
 
 @media (min-width: 700px) {
     header {
-    font-size: 400%;
+    font-size: 300%;
+
+}
+}
+
+@media (min-width: 750px) {
+    header {
+    font-size: 340%;
 
 }
 }
 
 @media (min-width: 999px) {
+    header {
+    font-size: 450%;
+
+}
+}
+
+@media (min-width: 1099px) {
     header {
     font-size: 500%;
 
@@ -123,7 +147,7 @@ h1 {
     }
 
     .under-header {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 }
 
@@ -139,7 +163,7 @@ h1 {
     }
 
     .under-header {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 }
 
@@ -154,7 +178,7 @@ h1 {
     }
 
     .under-header {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 }
 
@@ -170,14 +194,15 @@ h1 {
     }
 
     .under-header {
-        font-size: 3.3rem;
+        font-size: 3rem;
     }
 }
 
 
 
 .under-header {
-    font-family: "Freckle Face", system-ui;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600; 
     overflow-x: clip;
     margin: 5px;
     animation: slideText 12s infinite linear;
@@ -209,10 +234,11 @@ section {
 }
 
  h2 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700; 
     text-align: center;
     font-size: 2em;
     margin-top: 2rem;
-    font-family: "Playwrite US Modern", cursive;
     font-optical-sizing: auto;
     text-wrap: balance;
 }
@@ -227,8 +253,35 @@ section h2::after {
 }
 
 section p {
-    margin: 8px 0;
+    margin: 8px auto;
     line-height: 1.5;
+}
+#first-section p:nth-of-type(2) {
+    text-align: center;
+}
+
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.video-wrapper {
+    min-height: 170px;
+    min-width: 280px;
+    width: 50vw;
+    height: 30vw;
+    display: block;
+    margin: 15px auto;
+    border: 2px solid #ccc;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+}
+#first-section p:nth-of-type(2) {
+    text-wrap: balance;
+    
 }
 
 /* Resetting styles for em and strong elements */
@@ -247,10 +300,11 @@ strong {
     BENEFITS SECTION
     =============================================== */
 #benefits dt {
-    font-size: larger;
+    font-size: 135%;
     font-weight: bold;
     text-align: center;
     margin: 30px 0;
+    text-wrap: balance;
 }
 
 #benefits dd {
@@ -318,24 +372,52 @@ strong {
 
 
 
+/* SOCIALS  */
+.social-media {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+@media  (min-width: 394px) and (max-width: 824px) {
+  .social-media {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, auto);  
+  }
+}
+
+.socials {
+    width: 30px;
+    padding: 3px;
+    margin: 0 3px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.socials:hover {
+    transform: scale(1.2);
+}
+
 /* FOOTER */
 
 footer {
     background-color: #0C2D48;
     display: flex;
-    justify-content: space-between;
+    align-items: flex-start;
     color: #E3F6FC;
     box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.3);
     padding: 10px 0;
 }
 
 
+
+
 footer p {
     margin: 0;
 }
 
-footer h4 {
-    margin: 2px;
+footer h3 {
+    margin: 3px;
 }
 
 .footer-left {
@@ -348,7 +430,7 @@ footer h4 {
 }
 
 .footer-item {
-    padding-right: 20px;
+    padding-right: 10px;
     padding-top: 15px;
     padding-bottom: 5px;
 }
@@ -366,39 +448,71 @@ footer a:hover {
     background-color: #B1D4E0;
 }
 
-@media (min-width: 0px) and (max-width: 700px) {
+
+
+@media (min-width: 394px) and (max-width: 782px) {
   footer {
-/* NEED TO FIX IT LATER */
-
-  }
-
-}
-
-
-
-/* SOCIALS  */
-.social-media {
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-@media  (max-width: 800px) {
-  .social-media {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    grid-template-rows: repeat(2, auto);  
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
   }
+
+
+  .footer-left {
+  grid-column: 1;
+  grid-row: 1;
 }
 
-.socials {
-    width: 30px;
-    padding: 3px;
-    margin: 0 3px;
-    transition: transform 0.3s ease-in-out;
+
+.social-media {
+  grid-column: 1;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 50px);
+  grid-template-rows: repeat(2, auto);
+  justify-content: left;
+  padding-left: 15px;
 }
 
-.socials:hover {
-    transform: scale(1.2);
+.footer-item:nth-of-type(1) {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.footer-item:nth-of-type(2) {
+  grid-column: 2;
+  grid-row: 1;
+}
+    .footer-item {
+    text-align: right;
+}
+}
+
+@media (max-width: 393px) {
+    footer {
+        display: flex;
+        flex-direction: column-reverse;   
+    }
+    .footer-item {
+        padding-left: 5%;
+        
+    }
+    .social-media {
+        justify-content: left;
+        padding-left: 4%;
+        margin-bottom: 3px;
+    }
+}
+
+@media (min-width: 400px){
+#footer-div-3 {
+  margin-left: auto;
+}
+}
+
+@media (min-width: 470px) and (max-width: 533px) {
+    #contact {
+        width: 250px;
+    }
 }
 
