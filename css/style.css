@@ -38,15 +38,26 @@ nav ul {
     font-weight: bold;
     padding: 0.6rem;
 }
-
+@media (min-width: 518px){
 .navigation-link:hover {
     color: #1B3A4B;
     background-color: #B1D4E0;
     border-radius: 6px;
     transition: all 0.3s ease;
 }
+}
+
 
 @media (max-width: 518px) {
+ul li:first-child {
+    padding-left: 5px;
+}
+
+ul li:last-child {
+     padding-right: 5px;
+}
+
+
 .navigation-link {
     padding: 3px;   
 }
@@ -422,13 +433,14 @@ strong {
     transition: all 0.2s ease-in-out;
 }
 
-#partners a:hover {
+@media (min-width: 518px){
+    #partners a:hover {
     text-decoration: dotted;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     background-color: black;
     color: white;
 }
-
+}
 
 
 /* SOCIALS  */
@@ -452,10 +464,11 @@ strong {
     margin: 0 3px;
     transition: transform 0.3s ease-in-out;
 }
-
-.socials:hover {
+@media (min-width: 518px){
+    .socials:hover {
     transform: scale(1.2);
-}
+}}
+
 
 /* FOOTER */
 
@@ -502,10 +515,13 @@ footer a {
     transition: all 0.2s ease;
 }
 
-footer a:hover {
+@media (min-width: 518px){
+    footer a:hover {
     color: #0C2D48;
     background-color: #B1D4E0;
 }
+}
+
 
 
 
