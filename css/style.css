@@ -57,6 +57,10 @@ nav ul {
     justify-content: space-between;
 }
 }
+@media (max-width: 405px){
+nav {
+    font-size: 120%;
+}
 }
 @media (max-width: 373px){
 nav {
