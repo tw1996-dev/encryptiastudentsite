@@ -7,10 +7,12 @@ body {
 
 * {font-family: 'Outfit', sans-serif;}
 
+* {
+    box-sizing: border-box;
+}
 
-/* ===============================================
-    NAVIGATION   ----->>!!!!!!! MAX 518 px like that , need to fix it under that value 
-    =============================================== */
+
+/*  NAVIGATION   */
 nav {
     display: flex;
     margin: 0;
@@ -44,12 +46,38 @@ nav ul {
     transition: all 0.3s ease;
 }
 
-@media (max-width: 515px) {
-
+@media (max-width: 518px) {
+.navigation-link {
+    padding: 3px;   
 }
-
-
-
+nav {
+    font-size: 130%;
+}
+nav ul {
+    justify-content: space-between;
+}
+}
+}
+@media (max-width: 373px){
+nav {
+    font-size: 110%;
+}
+}
+@media (max-width: 346px){
+nav {
+    font-size: 100%;
+}
+}
+@media (max-width: 318px){
+nav {
+    font-size: 90%;
+}
+}
+@media (max-width: 295px){
+nav {
+    font-size: 80%;
+}
+}
 /* ===============================================
     HEADER
     =============================================== */
@@ -206,6 +234,7 @@ h1 {
     overflow-x: clip;
     margin: 5px;
     animation: slideText 12s infinite linear;
+    color: #f3f3f3;
 }
 
 
@@ -222,15 +251,15 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    /* width: 100%; */
 }
 
 section {
-    padding: 10px;
+    padding: 10px 0;
     font-size: larger;
-    margin-left: 2em;
+    /* margin-left: 2em; */
     width: 800px;
-    max-width: 90%;
+    /* max-width: 90%; */
 }
 
  h2 {
@@ -242,6 +271,21 @@ section {
     font-optical-sizing: auto;
     text-wrap: balance;
 }
+
+@media (max-width: 330px){
+h2 {
+    font-size: 1.8em;
+}
+}
+
+@media screen and (min-width: 851px){
+h2 {
+    font-size: 2.3em;
+}}
+@media screen and (min-width: 1200px){
+h2 {
+    font-size: 2.6em;
+}}
 
 section h2::after {
     content: "";
@@ -267,10 +311,9 @@ iframe {
     border: none;
 }
 .video-wrapper {
-    min-height: 170px;
-    min-width: 280px;
     width: 50vw;
     height: 30vw;
+    max-width: 700px;
     display: block;
     margin: 15px auto;
     border: 2px solid #ccc;
@@ -279,6 +322,13 @@ iframe {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 
 }
+@media (max-width: 500px){
+    .video-wrapper {
+        width: 100%;
+        height: 60vw;
+    }
+}
+
 #first-section p:nth-of-type(2) {
     text-wrap: balance;
     
@@ -309,6 +359,7 @@ strong {
 
 #benefits dd {
     margin-bottom: 10px;
+    margin-left: 0;
     line-height: 1.4;
 }
 
@@ -316,6 +367,10 @@ strong {
     PARTNERS SECTION
     =============================================== */
 /* Media query for grid layout in the partners section on larger screens */
+.grid-container dd{
+    margin-left: 0;
+}
+
 @media screen and (min-width: 851px) {
     .grid-container {
         display: grid;
