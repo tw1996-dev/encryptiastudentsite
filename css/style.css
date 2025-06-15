@@ -5,7 +5,10 @@ body {
     margin: 0;
 }
 
-* {font-family: 'Outfit', sans-serif;}
+* {font-family: 'Outfit', sans-serif;
+letter-spacing: 1px;
+}
+    
 
 * {
     box-sizing: border-box;
@@ -68,29 +71,33 @@ nav ul {
     justify-content: space-between;
 }
 }
-@media (max-width: 405px){
-nav {
-    font-size: 120%;
-}
-}
-@media (max-width: 373px){
+
+
+
+@media (max-width: 460px){
 nav {
     font-size: 110%;
+    letter-spacing: 0;
 }
 }
-@media (max-width: 346px){
+@media (max-width: 383px){
 nav {
     font-size: 100%;
 }
 }
-@media (max-width: 318px){
+@media (max-width: 357px){
 nav {
     font-size: 90%;
 }
 }
-@media (max-width: 295px){
+@media (max-width: 328px){
 nav {
     font-size: 80%;
+}
+}
+@media (max-width: 302px){
+nav {
+    font-size: 70%;
 }
 }
 /* ===============================================
